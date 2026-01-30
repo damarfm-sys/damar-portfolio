@@ -87,9 +87,43 @@
 }
 
 .dark {
-  /* Dark mode not needed for this design - keeping light theme */
-  --background: #FFFFFF;
-  --foreground: #1F2937;
+  /* Dark Mode Color Palette */
+  --primary: #E5E7EB; /* Light Gray for dark mode */
+  --primary-foreground: #111827;
+  --secondary: #9CA3AF; /* Medium Gray */
+  --secondary-foreground: #FFFFFF;
+  --accent: #D1D5DB; /* Lighter Gray */
+  --accent-foreground: #111827;
+  --muted: #1F2937; /* Dark Gray */
+  --muted-foreground: #9CA3AF; /* Medium Gray */
+  --destructive: #FCA5A5; /* Light Red */
+  --destructive-foreground: #111827;
+  --border: #374151; /* Dark Border */
+  --input: #111827; /* Almost Black */
+  --ring: #E5E7EB;
+  
+  /* Semantic Colors for Dark Mode */
+  --background: #0F172A; /* Very Dark Blue */
+  --foreground: #F3F4F6; /* Almost White */
+  --card: #1F2937; /* Dark Gray */
+  --card-foreground: #F3F4F6;
+  --popover: #1F2937;
+  --popover-foreground: #F3F4F6;
+  --sidebar: #1F2937;
+  --sidebar-foreground: #F3F4F6;
+  --sidebar-primary: #E5E7EB;
+  --sidebar-primary-foreground: #111827;
+  --sidebar-accent: #D1D5DB;
+  --sidebar-accent-foreground: #111827;
+  --sidebar-border: #374151;
+  --sidebar-ring: #E5E7EB;
+  
+  /* Chart Colors - Dark Mode */
+  --chart-1: #F3F4F6;
+  --chart-2: #E5E7EB;
+  --chart-3: #D1D5DB;
+  --chart-4: #9CA3AF;
+  --chart-5: #6B7280;
 }
 
 @layer base {

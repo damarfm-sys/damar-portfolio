@@ -50,7 +50,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 md:py-32 bg-white">
+    <section id="skills" className="py-20 md:py-32 bg-background">
       <div className="container space-y-16">
         {/* Section Header */}
         <div className="space-y-4 text-center">
@@ -67,7 +67,7 @@ export default function SkillsSection() {
             return (
               <div
                 key={categoryIndex}
-                className="bg-muted/50 rounded-lg p-8 border border-border hover:shadow-lg transition-shadow duration-300"
+                className="bg-muted/50 dark:bg-[#1F2937] rounded-lg p-8 border border-border hover:shadow-lg transition-shadow duration-300"
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-3 mb-6">
@@ -102,7 +102,7 @@ export default function SkillsSection() {
         <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
         {/* Additional Info */}
-        <div className="bg-muted rounded-lg p-8 border border-border">
+        <div className="bg-muted dark:bg-[#1F2937] rounded-lg p-8 border border-border">
           <h3 className="text-heading-md text-foreground mb-4">Fokus Pengembangan</h3>
           <p className="text-body text-foreground/80 mb-4">
             Saya terus belajar dan mengembangkan keahlian dalam teknologi terbaru, khususnya di bidang frontend development dan data analytics. Saya percaya bahwa pembelajaran berkelanjutan adalah kunci untuk tetap relevan di industri teknologi yang dinamis.

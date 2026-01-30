@@ -26,7 +26,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-white">
+    <section id="about" className="py-20 md:py-32 bg-background">
       <div className="container space-y-16">
         {/* Section Header */}
         <div className="space-y-4 text-center">
@@ -52,13 +52,13 @@ export default function AboutSection() {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <span className="font-semibold text-foreground min-w-fit">Email:</span>
-                  <a href="mailto:damarfm49@gmail.com" className="text-primary hover:underline">
+                  <a href="mailto:damarfm49@gmail.com" className="text-primary dark:text-[#E5E7EB] hover:underline">
                     damarfm49@gmail.com
                   </a>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="font-semibold text-foreground min-w-fit">Telepon:</span>
-                  <a href="tel:0895323667979" className="text-primary hover:underline">
+                  <a href="tel:0895323667979" className="text-primary dark:text-[#E5E7EB] hover:underline">
                     0895323667979
                   </a>
                 </div>
@@ -77,11 +77,11 @@ export default function AboutSection() {
               return (
                 <div
                   key={index}
-                  className="p-6 bg-muted rounded-lg hover:shadow-lg transition-shadow duration-300 border border-border"
+                  className="p-6 bg-muted dark:bg-[#1F2937] rounded-lg hover:shadow-lg transition-shadow duration-300 border border-border"
                 >
                   <div className="flex gap-4">
                     <div className="flex-shrink-0">
-                      <Icon className="w-6 h-6 text-primary" />
+                      <Icon className="w-6 h-6 text-foreground" />
                     </div>
                     <div className="space-y-2">
                       <h4 className="font-semibold text-foreground">{item.title}</h4>

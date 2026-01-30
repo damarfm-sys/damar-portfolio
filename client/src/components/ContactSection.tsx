@@ -58,7 +58,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-muted/30">
+    <section id="contact" className="py-20 md:py-32 bg-muted/30 dark:bg-[#1F2937]/50">
       <div className="container space-y-16">
         {/* Section Header */}
         <div className="space-y-4 text-center">
@@ -119,7 +119,7 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-lg p-8 border border-border shadow-md">
+          <div className="bg-background dark:bg-[#1F2937] rounded-lg p-8 border border-border shadow-md">
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Name Field */}
               <div>
