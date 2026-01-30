@@ -49,7 +49,7 @@ export default function ExperienceSection() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical Line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-primary to-secondary" />
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-foreground via-foreground to-secondary" />
 
           {/* Timeline Items */}
           <div className="space-y-8 md:space-y-12">
@@ -68,7 +68,7 @@ export default function ExperienceSection() {
                     <div className={isEven ? 'order-1' : 'order-2'}>
                       {isEven && (
                         <div className="text-right space-y-2">
-                          <div className="text-sm font-semibold text-primary">
+                          <div className="text-sm font-semibold text-foreground">
                             {item.startDate} - {item.endDate}
                           </div>
                         </div>
@@ -78,8 +78,8 @@ export default function ExperienceSection() {
                     {/* Center Dot */}
                     <div className={isEven ? 'order-2' : 'order-1'}>
                       <div className="flex justify-center">
-                        <div className="w-12 h-12 bg-white border-4 border-primary rounded-full flex items-center justify-center shadow-lg">
-                          <Icon className="w-6 h-6 text-primary" />
+                        <div className="w-12 h-12 bg-white border-4 border-foreground rounded-full flex items-center justify-center shadow-lg">
+                          <Icon className="w-6 h-6 text-foreground" />
                         </div>
                       </div>
                     </div>
@@ -88,8 +88,9 @@ export default function ExperienceSection() {
                     <div className={isEven ? 'order-3' : 'order-1'}>
                       {!isEven && (
                         <div className="space-y-2">
-                          <div className="text-sm font-semibold text-primary">
-                            {item.startDate} - {item.endDate}\n                          </div>
+                          <div className="text-sm font-semibold text-foreground">
+                            {item.startDate} - {item.endDate}
+                          </div>
                         </div>
                       )}
                     </div>
@@ -97,15 +98,14 @@ export default function ExperienceSection() {
 
                   {/* Card Content */}
                   <div className={`md:${isEven ? 'col-start-1' : 'col-start-2'} bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-border`}>
-                    <div className="flex items-start gap-3 md:hidden mb-4">
-                      <Icon className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                      <div className="text-xs font-semibold text-primary">
+                    <div className="flex items-center gap-3 md:hidden mb-4">
+                      <Icon className="w-5 h-5 text-foreground flex-shrink-0 mt-1" />
+                      <div className="text-xs font-semibold text-foreground">
                         {item.startDate} - {item.endDate}
                       </div>
                     </div>
-
                     <h3 className="text-heading-md text-foreground mb-1">{item.title}</h3>
-                    <p className="text-primary font-semibold mb-2">{item.company}</p>
+                    <p className="text-foreground font-semibold mb-2">{item.company}</p>
                     <p className="text-sm text-foreground/60 mb-3">{item.location}</p>
                     <p className="text-body text-foreground/80">{item.description}</p>
                   </div>

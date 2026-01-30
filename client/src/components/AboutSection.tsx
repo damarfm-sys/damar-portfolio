@@ -51,19 +51,19 @@ export default function AboutSection() {
               <h3 className="text-heading-md text-foreground">Informasi Kontak</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <span className="font-semibold text-primary min-w-fit">Email:</span>
+                  <span className="font-semibold text-foreground min-w-fit">Email:</span>
                   <a href="mailto:damarfm49@gmail.com" className="text-primary hover:underline">
                     damarfm49@gmail.com
                   </a>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="font-semibold text-primary min-w-fit">Telepon:</span>
+                  <span className="font-semibold text-foreground min-w-fit">Telepon:</span>
                   <a href="tel:0895323667979" className="text-primary hover:underline">
                     0895323667979
                   </a>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="font-semibold text-primary min-w-fit">Lokasi:</span>
+                  <span className="font-semibold text-foreground min-w-fit">Lokasi:</span>
                   <span className="text-foreground/80">Jln. Kampung Rawa Selatan 5, 10550 Jakarta</span>
                 </div>
               </div>

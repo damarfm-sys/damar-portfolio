@@ -44,7 +44,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
           <a
             href="#contact"
-            className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-[#0284C7] transition-all duration-200 font-semibold flex items-center justify-center gap-2 group"
+            className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-[#111827] transition-all duration-200 font-semibold flex items-center justify-center gap-2 group"
           >
             Mulai Proyek
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -58,11 +58,11 @@ export default function HeroSection() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-primary rounded-full animate-pulse" />
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-foreground rounded-full flex items-start justify-center p-2">
+              <div className="w-1 h-2 bg-foreground rounded-full animate-pulse" />
+            </div>
           </div>
-        </div>
       </div>
 
       {/* Decorative Elements */}

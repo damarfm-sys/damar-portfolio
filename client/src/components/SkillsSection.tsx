@@ -71,7 +71,7 @@ export default function SkillsSection() {
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-3 mb-6">
-                  <Icon className="w-6 h-6 text-primary" />
+                  <Icon className="w-6 h-6 text-foreground" />
                   <h3 className="text-heading-md text-foreground">{category.title}</h3>
                 </div>
 
@@ -81,12 +81,12 @@ export default function SkillsSection() {
                     <div key={skillIndex} className="space-y-2">
                       <div className="flex items-center justify-between">
                         <span className="font-medium text-foreground">{skill.name}</span>
-                        <span className="text-sm font-semibold text-primary">{skill.proficiency}%</span>
+                        <span className="text-sm font-semibold text-foreground">{skill.proficiency}%</span>
                       </div>
                       {/* Progress Bar */}
                       <div className="w-full h-2 bg-border rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-500"
+                          className="h-full bg-gradient-to-r from-foreground to-secondary rounded-full transition-all duration-500"
                           style={{ width: `${skill.proficiency}%` }}
                         />
                       </div>
@@ -102,7 +102,7 @@ export default function SkillsSection() {
         <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
         {/* Additional Info */}
-        <div className="bg-primary/5 rounded-lg p-8 border border-primary/20">
+        <div className="bg-muted rounded-lg p-8 border border-border">
           <h3 className="text-heading-md text-foreground mb-4">Fokus Pengembangan</h3>
           <p className="text-body text-foreground/80 mb-4">
             Saya terus belajar dan mengembangkan keahlian dalam teknologi terbaru, khususnya di bidang frontend development dan data analytics. Saya percaya bahwa pembelajaran berkelanjutan adalah kunci untuk tetap relevan di industri teknologi yang dinamis.
@@ -111,7 +111,7 @@ export default function SkillsSection() {
             {['React', 'TypeScript', 'Data Visualization', 'Web Performance'].map((tag, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                className="px-4 py-2 bg-foreground/10 text-foreground rounded-full text-sm font-medium"
               >
                 {tag}
               </span>

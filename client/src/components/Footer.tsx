@@ -72,8 +72,8 @@ export default function Footer() {
           <p className="text-white/60 text-sm">
             &copy; {currentYear} Damar Fatah Mubin. All rights reserved.
           </p>
-          <p className="text-white/60 text-sm flex items-center gap-1">
-            Dibuat dengan <Heart className="w-4 h-4 text-secondary" /> menggunakan React & Tailwind CSS
+            <p className="text-white/60 text-sm flex items-center gap-1">
+            Dibuat dengan <Heart className="w-4 h-4 text-red-400" /> menggunakan React & Tailwind CSS
           </p>
         </div>
       </div>

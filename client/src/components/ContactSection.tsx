@@ -85,7 +85,7 @@ export default function ContactSection() {
                     className="flex items-start gap-4 p-4 rounded-lg hover:bg-white transition-colors duration-200"
                   >
                     <div className="flex-shrink-0">
-                      <Icon className="w-6 h-6 text-primary" />
+                      <Icon className="w-6 h-6 text-foreground" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">{item.label}</h4>
@@ -102,14 +102,14 @@ export default function ContactSection() {
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="w-12 h-12 bg-primary text-primary-foreground rounded-lg flex items-center justify-center hover:bg-[#0284C7] transition-colors duration-200"
+                  className="w-12 h-12 bg-foreground text-white rounded-lg flex items-center justify-center hover:bg-[#111827] transition-colors duration-200"
                   title="LinkedIn"
                 >
                   <span className="text-lg font-bold">in</span>
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-primary text-primary-foreground rounded-lg flex items-center justify-center hover:bg-[#0284C7] transition-colors duration-200"
+                  className="w-12 h-12 bg-foreground text-white rounded-lg flex items-center justify-center hover:bg-[#111827] transition-colors duration-200"
                   title="GitHub"
                 >
                   <span className="text-lg font-bold">gh</span>
@@ -192,7 +192,7 @@ export default function ContactSection() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-[#0284C7] transition-colors duration-200 font-semibold flex items-center justify-center gap-2 group"
+                className="w-full px-6 py-3 bg-foreground text-white rounded-lg hover:bg-[#111827] transition-colors duration-200 font-semibold flex items-center justify-center gap-2 group"
               >
                 {submitted ? 'Pesan Terkirim!' : 'Kirim Pesan'}
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -46,44 +46,44 @@
 }
 
 :root {
-  /* Modern Minimalist Color Palette */
-  --primary: #0EA5E9; /* Teal Blue */
+  /* Monochrome Color Palette */
+  --primary: #1F2937; /* Dark Gray/Charcoal */
   --primary-foreground: #FFFFFF;
-  --secondary: #F97316; /* Warm Orange */
+  --secondary: #6B7280; /* Medium Gray */
   --secondary-foreground: #FFFFFF;
-  --accent: #F97316;
+  --accent: #374151; /* Darker Gray */
   --accent-foreground: #FFFFFF;
-  --muted: #F5F5F5; /* Light Gray */
+  --muted: #F3F4F6; /* Very Light Gray */
   --muted-foreground: #6B7280; /* Medium Gray */
-  --destructive: #EF4444;
+  --destructive: #7F1D1D; /* Dark Red */
   --destructive-foreground: #FFFFFF;
-  --border: #E5E7EB; /* Border Gray */
-  --input: #F3F4F6;
-  --ring: #0EA5E9;
+  --border: #E5E7EB; /* Light Border Gray */
+  --input: #F9FAFB; /* Almost White */
+  --ring: #1F2937;
   
   /* Semantic Colors */
   --radius: 0.65rem;
   --background: #FFFFFF;
-  --foreground: #1F2937; /* Charcoal */
+  --foreground: #111827; /* Almost Black */
   --card: #FFFFFF;
-  --card-foreground: #1F2937;
+  --card-foreground: #111827;
   --popover: #FFFFFF;
-  --popover-foreground: #1F2937;
+  --popover-foreground: #111827;
   --sidebar: #FFFFFF;
-  --sidebar-foreground: #1F2937;
-  --sidebar-primary: #0EA5E9;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #1F2937;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F97316;
+  --sidebar-accent: #374151;
   --sidebar-accent-foreground: #FFFFFF;
   --sidebar-border: #E5E7EB;
-  --sidebar-ring: #0EA5E9;
+  --sidebar-ring: #1F2937;
   
-  /* Chart Colors */
-  --chart-1: #0EA5E9;
-  --chart-2: #06B6D4;
-  --chart-3: #F97316;
-  --chart-4: #F59E0B;
-  --chart-5: #8B5CF6;
+  /* Chart Colors - Monochrome Grayscale */
+  --chart-1: #111827;
+  --chart-2: #1F2937;
+  --chart-3: #374151;
+  --chart-4: #6B7280;
+  --chart-5: #9CA3AF;
 }
 
 .dark {

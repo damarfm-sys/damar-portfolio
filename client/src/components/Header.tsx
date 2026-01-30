@@ -38,7 +38,7 @@ export default function Header() {
       <nav className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-[#0EA5E9] to-[#06B6D4] rounded-lg flex items-center justify-center">
+          <div className="w-10 h-10 bg-gradient-to-br from-[#1F2937] to-[#111827] rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-lg">D</span>
           </div>
           <span className="font-bold text-xl text-foreground hidden sm:inline">
@@ -59,7 +59,7 @@ export default function Header() {
           ))}
           <a
             href="#contact"
-            className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-[#0284C7] transition-colors duration-200 font-medium text-sm"
+            className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-[#111827] transition-colors duration-200 font-medium text-sm"
           >
             Hubungi Saya
           </a>
@@ -94,7 +94,7 @@ export default function Header() {
             ))}
             <a
               href="#contact"
-              className="block px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-[#0284C7] transition-colors font-medium text-center"
+              className="block px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-[#111827] transition-colors font-medium text-center"
               onClick={() => setIsOpen(false)}
             >
               Hubungi Saya
