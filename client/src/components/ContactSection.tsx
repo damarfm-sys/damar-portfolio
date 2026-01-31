@@ -1,7 +1,7 @@
 /**
  * Contact Section Component
  * Modern Minimalist Design - Contact form and information
- * Features: Contact form with Formspree integration, social links, and call-to-action
+ * Features: Contact form with FormSubmit integration, social links, and call-to-action
  */
 
 import { Mail, Phone, MapPin, Send, Linkedin, Github, Instagram } from 'lucide-react';
@@ -31,18 +31,18 @@ export default function ContactSection() {
     setIsLoading(true);
 
     try {
-      // Submit to Formspree
-      const response = await fetch('https://formspree.io/f/xyzgwpvq', {
+      // Submit to FormSubmit
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('subject', formData.subject);
+      formDataToSend.append('message', formData.message);
+      formDataToSend.append('_captcha', 'false');
+      formDataToSend.append('_next', window.location.href);
+
+      const response = await fetch('https://formsubmit.co/damarfm49@gmail.com', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }),
+        body: formDataToSend,
       });
 
       if (response.ok) {
