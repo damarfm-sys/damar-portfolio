@@ -1,11 +1,12 @@
 /**
  * Contact Section Component
  * Modern Minimalist Design - Contact form and information
- * Features: Contact form, social links, and call-to-action
+ * Features: Contact form with Formspree integration, social links, and call-to-action
  */
 
 import { Mail, Phone, MapPin, Send, Linkedin, Github, Instagram } from 'lucide-react';
 import { useState } from 'react';
+import { toast } from 'sonner';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -15,7 +16,7 @@ export default function ContactSection() {
     message: '',
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,15 +26,37 @@ export default function ContactSection() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setSubmitted(false);
-    }, 3000);
+    setIsLoading(true);
+
+    try {
+      // Submit to Formspree
+      const response = await fetch('https://formspree.io/f/xyzgwpvq', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        toast.success('Pesan Anda telah terkirim! Terima kasih telah menghubungi saya.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        toast.error('Gagal mengirim pesan. Silakan coba lagi.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error('Terjadi kesalahan. Silakan coba lagi nanti.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const contactInfo = [
@@ -82,7 +105,7 @@ export default function ContactSection() {
                   <a
                     key={index}
                     href={item.href}
-                    className="flex items-start gap-4 p-4 rounded-lg hover:bg-white transition-colors duration-200"
+                    className="flex items-start gap-4 p-4 rounded-lg hover:bg-white dark:hover:bg-[#2D3748] transition-colors duration-200"
                   >
                     <div className="flex-shrink-0">
                       <Icon className="w-6 h-6 text-foreground" />
@@ -146,7 +169,8 @@ export default function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  disabled={isLoading}
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Nama Anda"
                 />
               </div>
@@ -163,7 +187,8 @@ export default function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  disabled={isLoading}
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="email@example.com"
                 />
               </div>
@@ -180,7 +205,8 @@ export default function ContactSection() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  disabled={isLoading}
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Subjek pesan"
                 />
               </div>
@@ -196,8 +222,9 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                   rows={5}
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Tulis pesan Anda di sini..."
                 />
               </div>
@@ -205,9 +232,10 @@ export default function ContactSection() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-foreground text-white rounded-lg hover:bg-[#111827] transition-colors duration-200 font-semibold flex items-center justify-center gap-2 group"
+                disabled={isLoading}
+                className="w-full px-6 py-3 bg-foreground text-white rounded-lg hover:bg-[#111827] dark:hover:bg-[#D1D5DB] transition-colors duration-200 font-semibold flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {submitted ? 'Pesan Terkirim!' : 'Kirim Pesan'}
+                {isLoading ? 'Mengirim...' : 'Kirim Pesan'}
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
