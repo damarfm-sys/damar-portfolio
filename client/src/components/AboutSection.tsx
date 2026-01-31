@@ -1,6 +1,6 @@
 /**
  * About Section Component
- * Modern Minimalist Design - Clean layout with profile information
+ * Modern Minimalist Design - Clean layout with profile information and image
  * Features: Profile image, bio, and key highlights
  */
 
@@ -38,7 +38,24 @@ export default function AboutSection() {
 
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left - Profile Info */}
+          {/* Left - Profile Image */}
+          <div className="flex justify-center md:justify-start">
+            <div className="relative w-64 h-80 md:w-72 md:h-96">
+              {/* Image Container with Border */}
+              <div className="absolute inset-0 bg-gradient-to-br from-foreground/20 to-foreground/5 rounded-2xl p-1">
+                <img
+                  src="/images/profile.png"
+                  alt="Damar Fatah Mubin"
+                  className="w-full h-full object-cover rounded-2xl shadow-2xl"
+                />
+              </div>
+              
+              {/* Decorative Element */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 dark:bg-primary/5 rounded-full blur-3xl" />
+            </div>
+          </div>
+
+          {/* Right - Profile Info */}
           <div className="space-y-6">
             <div className="space-y-4">
               <h3 className="text-heading-md text-foreground">Profil Singkat</h3>
@@ -68,29 +85,22 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Right - Highlights */}
-          <div className="space-y-6">
-            {highlights.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-6 bg-muted dark:bg-[#1F2937] rounded-lg hover:shadow-lg transition-shadow duration-300 border border-border"
-                >
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <Icon className="w-6 h-6 text-foreground" />
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="font-semibold text-foreground">{item.title}</h4>
-                      <p className="text-sm text-foreground/70">{item.description}</p>
+            {/* Highlights */}
+            <div className="space-y-3 pt-4">
+              {highlights.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div key={index} className="flex items-start gap-3">
+                    <Icon className="w-5 h-5 text-foreground flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-foreground text-sm">{item.title}</h4>
+                      <p className="text-xs text-foreground/70">{item.description}</p>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
 
