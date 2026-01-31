@@ -5,7 +5,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Menu, X, Moon, Sun, Download } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
 
 export default function Header() {
@@ -60,6 +60,17 @@ export default function Header() {
             </a>
           ))}
           
+          {/* Download CV Button */}
+          <a
+            href="/Damar_Fatah_Mubin_CV.pdf"
+            download="Damar_Fatah_Mubin_CV.pdf"
+            className="flex items-center gap-2 px-4 py-2 bg-muted text-foreground rounded-lg hover:bg-foreground/10 transition-colors duration-200 font-medium text-sm"
+            title="Download CV"
+          >
+            <Download className="w-4 h-4" />
+            <span className="hidden sm:inline">CV</span>
+          </a>
+          
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
@@ -83,6 +94,14 @@ export default function Header() {
 
         {/* Mobile Menu & Theme Toggle */}
         <div className="md:hidden flex items-center gap-2">
+          <a
+            href="/Damar_Fatah_Mubin_CV.pdf"
+            download="Damar_Fatah_Mubin_CV.pdf"
+            className="p-2 rounded-lg hover:bg-muted transition-colors"
+            title="Download CV"
+          >
+            <Download className="w-5 h-5 text-foreground" />
+          </a>
           <button
             onClick={toggleTheme}
             className="p-2 rounded-lg hover:bg-muted transition-colors"
@@ -121,6 +140,15 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
+            <a
+              href="/Damar_Fatah_Mubin_CV.pdf"
+              download="Damar_Fatah_Mubin_CV.pdf"
+              className="block px-4 py-2 bg-muted text-foreground rounded-lg hover:bg-foreground/10 transition-colors font-medium text-center flex items-center justify-center gap-2"
+              onClick={() => setIsOpen(false)}
+            >
+              <Download className="w-4 h-4" />
+              Download CV
+            </a>
             <a
               href="#contact"
               className="block px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-[#111827] dark:hover:bg-[#D1D5DB] transition-colors font-medium text-center"

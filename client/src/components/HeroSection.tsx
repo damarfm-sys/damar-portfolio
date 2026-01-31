@@ -4,7 +4,7 @@
  * Features: Large heading, subheading, CTA button, and decorative elements
  */
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -43,15 +43,23 @@ export default function HeroSection() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
           <a
-            href="#contact"
+            href="/Damar_Fatah_Mubin_CV.pdf"
+            download="Damar_Fatah_Mubin_CV.pdf"
             className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-[#111827] transition-all duration-200 font-semibold flex items-center justify-center gap-2 group"
+          >
+            Download CV
+            <Download className="w-5 h-5 group-hover:scale-110 transition-transform" />
+          </a>
+          <a
+            href="#contact"
+            className="px-8 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary/5 transition-colors duration-200 font-semibold flex items-center justify-center gap-2 group"
           >
             Mulai Proyek
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#experience"
-            className="px-8 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary/5 transition-colors duration-200 font-semibold"
+            className="px-8 py-3 border-2 border-foreground/30 text-foreground rounded-lg hover:border-foreground/60 transition-colors duration-200 font-semibold"
           >
             Lihat Pengalaman
           </a>
