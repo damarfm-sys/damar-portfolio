@@ -14,7 +14,7 @@ export default function ExperienceSection() {
       company: 'PT. Fajar Mitra Indah (FamilyMart)',
       location: 'Jakarta Pusat',
       startDate: 'Mei 2022',
-      endDate: 'Juli 2025',
+      endDate: 'November 2025',
       description: 'Bekerja sebagai Crew Store di FamilyMart selama lebih dari 3 tahun dengan tanggung jawab penuh dalam operasional toko, customer service, dan inventory management.',
       icon: Briefcase,
     },
