@@ -4,7 +4,7 @@
  * Features: Contact form, social links, and call-to-action
  */
 
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github, Instagram } from 'lucide-react';
 import { useState } from 'react';
 
 export default function ContactSection() {
@@ -101,18 +101,31 @@ export default function ContactSection() {
               <h4 className="font-semibold text-foreground mb-4">Terhubung dengan Saya</h4>
               <div className="flex gap-4">
                 <a
-                  href="#"
-                  className="w-12 h-12 bg-foreground text-white rounded-lg flex items-center justify-center hover:bg-[#111827] transition-colors duration-200"
+                  href="https://id.linkedin.com/in/damar-fatah-m-b37750299"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-foreground text-white rounded-lg flex items-center justify-center hover:bg-[#111827] dark:hover:bg-[#D1D5DB] transition-colors duration-200"
                   title="LinkedIn"
                 >
-                  <span className="text-lg font-bold">in</span>
+                  <Linkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="#"
-                  className="w-12 h-12 bg-foreground text-white rounded-lg flex items-center justify-center hover:bg-[#111827] transition-colors duration-200"
+                  href="https://github.com/damarfm-sys"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-foreground text-white rounded-lg flex items-center justify-center hover:bg-[#111827] dark:hover:bg-[#D1D5DB] transition-colors duration-200"
                   title="GitHub"
                 >
-                  <span className="text-lg font-bold">gh</span>
+                  <Github className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://www.instagram.com/jdnu4vr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-foreground text-white rounded-lg flex items-center justify-center hover:bg-[#111827] dark:hover:bg-[#D1D5DB] transition-colors duration-200"
+                  title="Instagram"
+                >
+                  <Instagram className="w-6 h-6" />
                 </a>
               </div>
             </div>

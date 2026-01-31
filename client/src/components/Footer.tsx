@@ -3,7 +3,7 @@
  * Modern Minimalist Design - Clean footer with links and copyright
  */
 
-import { Heart } from 'lucide-react';
+import { Heart, Linkedin, Github, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -48,10 +48,39 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Social Media */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Hubungi Saya</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="font-semibold">Ikuti Saya</h4>
+            <div className="flex gap-3">
+              <a
+                href="https://id.linkedin.com/in/damar-fatah-m-b37750299"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                title="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com/damarfm-sys"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                title="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/jdnu4vr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                title="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
+            <ul className="space-y-2 text-sm pt-2">
               <li>
                 <a href="mailto:damarfm49@gmail.com" className="text-white/70 hover:text-white transition-colors">
                   damarfm49@gmail.com
@@ -62,7 +91,6 @@ export default function Footer() {
                   0895323667979
                 </a>
               </li>
-              <li className="text-white/70">Jakarta, Indonesia</li>
             </ul>
           </div>
         </div>
